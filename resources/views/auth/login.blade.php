@@ -28,7 +28,7 @@
             @csrf
             <!-- Logo -->
 	          <div class="form-group text-center">
-              <img src="{{ url('storage/view-images//hormiga.png') }}" alt="icon__bio-stock">
+              <img src="{{ url('storage/view-images/hormiga.png') }}" alt="icon__bio-stock">
 	          </div>
 	          <div class="form-group text-center">
               <h1 class="title__logo"> BIO-STOCK </h1>

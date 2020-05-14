@@ -1,10 +1,33 @@
 @extends('layouts.app')
 
+@push('styles')
+  <link rel="stylesheet" type="text/css" href="{{ asset('css/specimens/list.css') }}">
+@endpush
+
+@push('scripts')
+  <script type="text/javascript" src="{{ asset('js/specimens/list.js') }}"></script>
+@endpush
+
 @section('content')
 
 <div class="container">
 
-  <h1 class="mt-5"> Lista de Espécimens: {{ $count }} REGISTROS </h1>
+  <div class="row mt-5">
+    <div class="col-9">
+      <h1 class=""> Lista de Espécimens: {{ $count }} REGISTROS </h1>
+    </div>
+    <div class="col-3 text-right">
+      <form action="{{ route('specimens.export', urlencode(serialize($ids))) }}" method="GET">
+        @csrf
+        <button type="submit" class="btn btn-download pt-2 pb-2 pl-4 pr-4">
+          <div class="flex-row">
+            <img class="export_img" src="{{ url('storage/view-images/download.png') }}">
+            <b class="ml-2"> Exportar </b>
+          </div>
+        </button>
+      </form>
+    </div>
+  </div>
 
   <table class="table mt-5">
     <thead>
@@ -20,7 +43,7 @@
       @foreach ($specimens as $specimen)
         <tr>
           <th scope="row"> {{ $specimen->id }} </th>
-          <td class="pl-5"> {{ $specimen->code }} </td>
+          <td class="pl-5"> {{ $specimen->catalog_number }} </td>
           <td> ... </td>
           <td> ... </td>
           <td>

@@ -1,11 +1,19 @@
 @extends('layouts.app')
 
+@push('styles')
+  <link rel="stylesheet" type="text/css" href="{{ asset('css/specimens/edit.css') }}">
+@endpush
+
+@push('scripts')
+  <script type="text/javascript" src="{{ asset('js/specimens/edit.js') }}"></script>
+@endpush
+
 @section('content')
 
-<div class="container">
+<div class="container mt-5 mb-5">
 
-  <h1 id="top" class="mt-5"> Editar Espécimen {{ $specimen->code }} </h1>
-
+  <h1 id="top" class=""> <b> Editar Espécimen </b> {{ $specimen->catalog_number }} </h1>
+  
   <form action="{{ route('specimens.update', $specimen) }}" method="POST">
     @method('PUT')
     @csrf
@@ -312,29 +320,54 @@
                   </div>
               
                   <div class="row mt-4">
-                    <div class="col-3 offset-2">
+                    <div class="col-2 offset-2">
                       <label style="font-size: 29px; font-weight: bold;"> Latitud </label>
                     </div>
-                    <div class="col-3">
+                    <div class="col-2 ml-3">
                       <label style="font-size: 29px; font-weight: bold;"> Longitud </label>
                     </div>
-                    <div class="col-2">
+                    <div class="col-2 ml-3">
                       <label style="font-size: 29px; font-weight: bold;"> Altitud </label>
                     </div>
                   </div>
                   <div class="row">
-                    <div class="col-3 offset-2">
+                    <div class="col-2 offset-2">
                       <input type="text" name="latitude" value="{{ $specimen->collection->latitude }}" class="form-control form-control-lg" placeholder="">
                     </div>
-                    <div class="col-3">
+                    <div class="col-2 ml-3">
                       <input type="text" name="longitude" value="{{ $specimen->collection->longitude }}" class="form-control form-control-lg" placeholder="">
                     </div>
-                    <div class="col-2">
+                    <div class="col-2 ml-3">
                       <input type="text" name="altitude" value="{{ $specimen->collection->altitude }}" class="form-control form-control-lg" placeholder="">
                     </div>
+                    {{-- Google Maps | title section --}}
+                    <div class="col-2" id="headingMap">
+                      <button
+                        type="button" 
+                        class="btn btn-view-map" 
+                        data-toggle="collapse" 
+                        data-target="#collapseMap" 
+                        aria-expanded="true" 
+                        aria-controls="collapseMap">
+                        <img src="{{ url('storage/view-images/google_maps.png') }}" alt="export">
+                      </button>
+                    </div>
+                  </div>
+
+                  {{-- Google Maps | collapse section --}}
+                  <div id="collapseMap" class="collapse mt-5 text-center" aria-labelledby="headingMap">
+                    <iframe 
+                      width="60%" 
+                      height="450" 
+                      src="https://maps.google.com/?q={{$specimen->collection->latitude}},{{$specimen->collection->longitude}}&z=18&t=m&output=embed" 
+                      frameborder="0"
+                      scrolling="no"
+                      marginheight="0"
+                      marginwidth="0">
+                    </iframe>
                   </div>
               
-                  <div class="row mt-4">
+                  <div class="row mt-5">
                     <div class="col offset-2">
                       <label style="font-size: 29px; font-weight: bold;"> Fecha de Colecta </label>
                     </div>
@@ -526,7 +559,7 @@
       </div>
     </div>
 
-    <div class="d-flex justify-content-end mt-4">
+    <div class="d-flex justify-content-end mt-5">
       <button type="submit" class="btn btn-success pl-4 pr-4 pt-2 pb-2" style="font-size: 20px; font-weight: bold"> GUARDAR </button>
     </div>
 

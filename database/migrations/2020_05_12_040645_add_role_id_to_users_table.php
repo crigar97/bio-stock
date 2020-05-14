@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateSpecimensTable extends Migration
+class AddRoleIdToUsersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,8 @@ class CreateSpecimensTable extends Migration
      */
     public function up()
     {
-        Schema::create('specimens', function (Blueprint $table) {
-            $table->id();
-            $table->text('collection_notes')->nullable();
-            $table->text('correction_notes')->nullable();
-            $table->timestamps();
+        Schema::table('users', function (Blueprint $table) {
+            $table->foreignId('role_id')->constrained();
         });
     }
 
@@ -28,6 +25,8 @@ class CreateSpecimensTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('specimens');
+        Schema::table('users', function (Blueprint $table) {
+            $table->dropForeign(['role_id']);
+        });
     }
 }

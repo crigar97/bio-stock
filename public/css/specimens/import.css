@@ -1,0 +1,27 @@
+.load {
+  padding: 5px;
+  border: 2px solid #00b181;
+  border-radius: 60px;
+  color: #00b181;
+  font-size: 23px;
+  font-weight: bold;
+}
+
+.load:hover {
+  background: #00b181;
+  color: white;
+}
+
+.btn-import {
+  padding: 5px;
+  background: #a7643e;
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.btn-import:hover {
+  background: #643b23;
+  color: white;
+}
+

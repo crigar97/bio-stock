@@ -1,0 +1,174 @@
+.btn-add-data {
+  padding: 5px 20px;
+  background: #44578d1c;
+  border: 2px solid #44578d;
+  border-radius: 60px;
+  color: #44578d;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.btn-add-data:hover {
+  background: #44578d;
+  color: white;
+}
+
+.md-btn-add-data-attribute {
+  background: #44578d;
+  color: white;
+}
+
+.md-btn-add-data-attribute:hover {
+  background: #2d3a5e;
+  color: white;
+}
+
+.txt-addDataAtt {
+  color: #44578d;
+}
+
+.btn-add-taxonomie {
+  padding: 5px 15px;
+  background: #87c9d61c;
+  border: 2px solid #87c9d6;
+  border-radius: 60px;
+  color: #87c9d6;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.btn-add-taxonomie:hover {
+  background: #87c9d6;
+  color: white;
+}
+
+.md-btn-add-taxonomie-attribute {
+  background: #87c9d6;
+  color: white;
+}
+
+.md-btn-add-taxonomie-attribute:hover {
+  background: #608f99;
+  color: white;
+}
+
+.txt-addTaxoAtt {
+  color: #87c9d6;
+}
+
+.btn-add-curatorial {
+  padding: 5px 15px;
+  background: #8dbcae1c;
+  border: 2px solid #8dbcae;
+  border-radius: 60px;
+  color: #8dbcae;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.btn-add-curatorial:hover {
+  background: #8dbcae;
+  color: white;
+}
+
+.md-btn-add-curatorial-attribute {
+  background: #8dbcae;
+  color: white;
+}
+
+.md-btn-add-curatorial-attribute:hover {
+  background: #72978c;
+  color: white;
+}
+
+.txt-addCuraAtt {
+  color: #8dbcae;
+}
+
+.btn-add-collection {
+  padding: 5px 15px;
+  background: #caaa8d1c;
+  border: 2px solid #caaa8d;
+  border-radius: 60px;
+  color: #caaa8d;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.btn-add-collection:hover {
+  background: #caaa8d;
+  color: white;
+}
+
+.md-btn-add-collection-attribute {
+  background: #caaa8d;
+  color: white;
+}
+
+.md-btn-add-collection-attribute:hover {
+  background: #967e67;
+  color: white;
+}
+
+.txt-addColleAtt {
+  color: #caaa8d;
+}
+
+.btn-add-caste {
+  padding: 5px 15px;
+  background: #4322291c;
+  border: 2px solid #432229;
+  border-radius: 60px;
+  color: #432229;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.btn-add-caste:hover {
+  background: #432229;
+  color: white;
+}
+
+.md-btn-add-caste-attribute {
+  background: #432229;
+  color: white;
+}
+
+.md-btn-add-caste-attribute:hover {
+  background: #36161d;
+  color: white;
+}
+
+.txt-addCasteAtt {
+  color: #432229;
+}
+
+.btn-search {
+  padding: 5px 25px;
+  background: #00b181;
+  border-radius: 60px;
+  color: white;
+  font-size: 25px;
+}
+
+.btn-search:hover {
+  background: #027e5d;
+  color: white;
+}
+
+#new_attribute {
+  color: black;
+  font-size: 20px;
+}
+
+.tag-taxo {
+  padding: 3px 7px;
+  background: #44578d;
+  border-radius: 3px 0px 0px 3px;
+}
+
+.brd-taxo {
+  border-radius: 0px 3px 3px 0px;
+  border: 1px solid #44578d;
+}
+

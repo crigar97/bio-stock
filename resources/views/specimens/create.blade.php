@@ -421,7 +421,7 @@
                         <label style="font-size: 29px; font-weight: bold;"> Colector (1) </label>
                       </div>
                       <div class="col-4">
-                        <label style="font-size: 29px; font-weight: bold;"> Collector (2) </label>
+                        <label style="font-size: 29px; font-weight: bold;"> Colector (2) </label>
                       </div>
                     </div>
                     <div class="row">
@@ -590,11 +590,7 @@
                     <div class="row">
                       <div class="col-8 offset-2">
                         <div class="input-group">
-                          <select class="form-control form-control-lg" name="code">
-                            <option> CMVF </option>
-                            <option> CCMVF </option>
-                            <option> ICUAPFOR </option>
-                          </select>
+                          <input type="text" name="code" class="form-control form-control-lg" placeholder="Número de Catálogo">
                           <div class="input-group-append">
                             <label class="input-group-text pl-5 pr-5" style="font-size: 20px;"> ?????????? </label>
                           </div>

@@ -30,16 +30,12 @@ class Specimen extends Model
         return $this->hasOne('App\Caste');
     }
 
-    public static function generateCode($code) {
-        try {
-            $lastId = Specimen::latest()->first()->id;
-            $zeros = '';
-            for ($i = 0; $i < 10 - strlen($lastId); $i++) { 
-                $zeros .= '0';
-            }
-            return ($code . $zeros . ($lastId + 1));
-        } catch (\Exception $e) {
-            return ($code . '0000000001');
-        }
+    public function code() {
+        return $this->belongsTo('App\Code');
+    }
+
+    public function getCatalogNumberAttribute()
+    {
+        return "{$this->code->value}00000000{$this->id}";
     }
 }

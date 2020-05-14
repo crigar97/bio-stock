@@ -1,0 +1,23 @@
+.item {
+  background: #2e556b;
+  color: white;
+  font-size: 25px;
+}
+
+.bord-blue {
+  border: #2e556b 2px solid;
+}
+
+.btn-download {
+  padding: 5px;
+  border: 2px solid #00b181;
+  border-radius: 60px;
+  color: #00b181;
+  font-size: 23px;
+  font-weight: bold;
+}
+
+.btn-download:hover {
+  background: #00b181;
+  color: white;
+}

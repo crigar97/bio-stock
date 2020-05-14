@@ -1,0 +1,26 @@
+.btn-view-map {
+  padding: 10px 30px;
+  margin-left: 33px;
+  border: 2px solid #28a645;
+  border-radius: 5px;
+}
+
+.btn-view-map:hover {
+  background: #218838;
+  border: 2px solid #218838;
+  border-radius: 5px;
+}
+
+.btn-download {
+  padding: 5px;
+  border: 2px solid #00b181;
+  border-radius: 60px;
+  color: #00b181;
+  font-size: 23px;
+  font-weight: bold;
+}
+
+.btn-download:hover {
+  background: #00b181;
+  color: white;
+}

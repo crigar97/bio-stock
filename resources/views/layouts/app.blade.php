@@ -11,6 +11,7 @@
 
   <!-- Scripts -->
   <script src="{{ asset('js/app.js') }}" defer></script>
+  @stack('scripts')
 
   <!-- Fonts -->
   <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -57,6 +58,7 @@
   </style>
   <link href="{{ asset('css/app.css') }}" rel="stylesheet">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  @stack('styles')
 </head>
 <body>
   <div id="app">
@@ -91,13 +93,24 @@
                   -->
               @else
                 <li class="nav-item">
-                  <a class="nav-link" href="{{ route('home') }}"> Inicio </a>
+                  <a class="nav-link" href="{{ route('home') }}">
+                    <img src="{{ url('storage/view-images/menu-icon.png') }}">    
+                    <span id="menuLabel" class="ml-1"> Menú </span>
+                  </a>
                 </li>
-                
+
+                <li class="nav-item">
+                  <a class="nav-link" href="{{ route('users.index') }}">
+                    <img src="{{ url('storage/view-images/profile-icon.png') }}">    
+                    <span id="profileLabel" class="ml-1"> Mi Perfil </span>
+                  </a>
+                </li>
+
                 <li class="nav-item ml-3">
                   <a class="nav-link" href="{{ route('logout') }}"
                     onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                    Cerrar Sesión
+                    <img src="{{ url('storage/view-images/sign-off-icon.png') }}">    
+                    <span id="signOffLabel" class="ml-1"> Cerrar Sesión </span>
                   </a>
                   <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                     @csrf
@@ -135,7 +148,7 @@
       </div>
     </nav>
 
-    <main class="py-4">
+    <main class="">
       @yield('content')
     </main>
     
